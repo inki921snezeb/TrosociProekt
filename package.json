@@ -1,0 +1,15 @@
+{
+  "name": "calculator-for-living-expenses",
+  "version": "1.0.0",
+  "description": "Овој проект е калкулатор за животни трошоци кој помага на корисниците да го следат и управуваат својот месечен буџет. Апликацијата ќе овозможи внесување на разни трошоци (стан, храна, превоз, и други) и автоматски ќе пресмета вкупен месечен износ.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
