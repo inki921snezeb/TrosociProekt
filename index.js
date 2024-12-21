@@ -1,11 +1,21 @@
-const express = require('express');
-const app = express();
-const port = 3000;
+document.getElementById('formularZaTrosoci').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const kategorija = document.getElementById('kategorijaInput').value;
+    const iznos = parseFloat(document.getElementById('iznosInput').value);
+    
+    if (isNaN(iznos) || iznos <= 0) {
+        alert("Ве молам внесете валиден износ!");
+        return;
+    }
 
-app.get('/', (req, res) => {
-  res.send('Здраво, свет!');
-});
+    let vkupno = parseFloat(localStorage.getItem('vkupno') || 0);
+    vkupno += iznos;
+    localStorage.setItem('vkupno', vkupno);
 
-app.listen(port, () => {
-  console.log(`Серверот слуша на http://localhost:${port}`);
+    document.getElementById('vkupno').textContent = vkupno + " денари";
+    
+    // Очисти ја формата по внесување
+    document.getElementById('kategorijaInput').value = '';
+    document.getElementById('iznosInput').value = '';
 });

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калкулатор за Трошоци</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Калкулатор за Трошоци</h1>
+    <form id="formularZaTrosoci">
+        <label for="kategorijaInput">Категорија</label>
+        <input type="text" id="kategorijaInput" placeholder="Внесете категорија" required>
+        <label for="iznosInput">ИЗнос</label>
+        <input type="number" id="iznosInput" placeholder="Внесете износ" required>
+        <button type="submit">Додади трошок</button>
+    </form>
+    <div id="vkupnoTrosoci">
+        <h3>Вкупно трошоци:</h3>
+        <p id="vkupno"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
